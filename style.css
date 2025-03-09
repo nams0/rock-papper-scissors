@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=VT323&display=swap');
+
+:root {
+    --bg-color: #152026;
+    --bg-container: #181C25;
+    --player-color: #f02929;
+    --computer-color: #297cf0;
+    --goal-color: #29f036;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    font-family: "VT323", monospace;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    background-color: var(--bg-color);
+}
+
+.container {
+    height: 450px;
+    margin-top: 20px;
+    padding: 50px 70px 50px 70px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-container);
+    overflow: hidden;
+}
+
+.container > h4 {
+    margin: 30px 0;
+    /* display: none; */
+}
+
+.actions img {
+    margin: 0 4px 9px 4px;
+    width: 100px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.actions img:hover {
+    filter: drop-shadow(0px 0px 5px #fff);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#you,
+#goal,
+#computer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#you p {
+    color: var(--player-color);
+    margin: 0 20px;
+}
+
+#goal p {
+    color: var(--goal-color);
+    font-size: 3rem;
+    margin: 0 20px;
+}
+
+#computer p {
+    color: var(--computer-color);
+    margin: 0 20px;
+}
+
+.result {
+    margin: 50px 0px;
+    /* padding: 50px 70px 50px 70px; */
+    display: none;
+}
+
+.result img {
+    width: 123px;
+    margin: 0 20px;
+}
+
+.try_again {
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 1.4rem;
+    background-color: #363636;
+    padding: 5px 70px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.try_again img {
+    margin-right: 5px;
+}
+
+.try_again:hover {
+    box-shadow: 0px 0px 8px #fff;
+}
+
+.result_message {
+    display: none;
+    /* display: flex; */
+    font-family: monospace;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 3%;
+    font-family: monospace;
+    font-size: 0.8rem;
+    display: flex;
+}
+
+#hand_draw {
+    display: flex;
+    font-family: "Just Another Hand", cursive;
+    font-size: 1.5rem;
+}
+
+#hand_draw span {
+    margin-top: 50px;
+    width: 100px;
+
+}
+
+#developer {
+    font-size: 1rem;
+    margin-top: 50px;
+}
+
+#developer p:nth-child(2){
+    transition: 0.5s ease-in;
+}
+
+.scramble_effect {
+    color: var(--goal-color);
+    text-shadow: 0px 0px 10px var(--goal-color);
+}
+
+@keyframes shake-hands {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(-50deg);
+    }
+    40% {
+        transform: rotate(50deg);
+    }
+    60% {
+        transform: rotate(-45deg);
+    }
+    80% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media only screen and ((min-width: 400px) and (max-width: 1500px)) {
+    h1 {
+        font-size: 3rem;
+    }
+    footer {
+        margin-top: 120px;
+    }
+}
