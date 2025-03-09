@@ -215,11 +215,27 @@ footer {
     }
 }
 
-@media only screen and ((min-width: 400px) and (max-width: 1500px)) {
+@media only screen and ((min-width: 500px) and (max-width: 1500px)) {
     h1 {
         font-size: 3rem;
     }
     footer {
-        margin-top: 120px;
+        margin-top: 100px;
+    }
+}
+
+@media only screen and ((min-width: 400px) and (max-width: 500px)) {
+    .container{
+        width: 90%;
+        font-size: 1.8rem;
+    }
+    .container img {
+        width: 90px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    footer {
+        margin-top: 80px;
     }
 }
